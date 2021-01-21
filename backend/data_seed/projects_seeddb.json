@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Green Whisk",
+    "shortDescription": "",
+    "pictureURL": "/images/design_projects/green_whisk/gwmain.jpg",
+    "mainDescription": "",
+    "projectPictures": [
+      "/images/design_projects/green_whisk/gwmain.jpg",
+      "/images/design_projects/green_whisk/mainPic.jpg",
+      "/images/design_projects/green_whisk/p1.jpg",
+      "/images/design_projects/green_whisk/p2.jpg",
+      "/images/design_projects/green_whisk/p3.jpg",
+      "/images/design_projects/green_whisk/p4.jpg",
+      "/images/design_projects/green_whisk/p5.jpg"
+    ]
+  },
+  {
+    "name": "Jolie Jewellery",
+    "shortDescription": "",
+    "pictureURL": "/images/design_projects/jolie_jewellery/main.jpg",
+    "mainDescription": "",
+    "projectPictures": [
+      "/images/design_projects/jolie_jewellery/main.jpg",
+      "/images/design_projects/jolie_jewellery/p1.jpg",
+      "/images/design_projects/jolie_jewellery/p2.jpg",
+      "/images/design_projects/jolie_jewellery/p3.jpg",
+      "/images/design_projects/jolie_jewellery/p4.jpg",
+      "/images/design_projects/jolie_jewellery/p5.jpg"
+    ]
+  },
+  {
+    "name": "Plain Threads",
+    "shortDescription": "",
+    "pictureURL": "/images/design_projects/plain_threads/mainPic.jpg",
+    "mainDescription": "",
+    "projectPictures": [
+      "/images/design_projects/plain_threads/mainPic.jpg",
+      "/images/design_projects/plain_threads/p1.jpg",
+      "/images/design_projects/plain_threads/p2.jpg",
+      "/images/design_projects/plain_threads/p3.jpg",
+      "/images/design_projects/plain_threads/p4.jpg",
+      "/images/design_projects/plain_threads/p5.jpg",
+      "/images/design_projects/plain_threads/p6.jpg"
+    ]
+  },
+  {
+    "name": "Cyber Garden",
+    "shortDescription": "",
+    "pictureURL": "/images/design_projects/cyber_garden/cbMain.jpg",
+    "mainDescription": "",
+    "projectPictures": [
+      "/images/design_projects/cyber_garden/p1.jpg",
+      "/images/design_projects/cyber_garden/p2.jpg",
+      "/images/design_projects/cyber_garden/p3.jpg",
+      "/images/design_projects/cyber_garden/p4.jpg",
+      "/images/design_projects/cyber_garden/p5.jpg"
+
+    ]
+  }
+]
