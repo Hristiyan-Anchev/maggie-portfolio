@@ -1,4 +1,5 @@
-require("dotenv").config({path:"/home/hristian/WebstormProjects/workshop-react/backend/.env"});
+require("dotenv").config({path:`${__dirname}/.env`});
+console.log(__dirname);
 require("./config/mongoose-config")();
 var createError = require('http-errors');
 var express = require('express');
