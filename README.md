@@ -9,7 +9,7 @@ This is a portfolio website using React as frontend, ExpressJS for backend and  
 ### 1. Clone the repository
 > git clone https://github.com/Hristiyan-Anchev/maggie-portfolio/
 
-2. Go to the project folder and install all the dependencies for both the development client and backend.
+### 2. Go to the project folder and install all the dependencies for both the development client and backend.
 
 
 > **$** cd client && npm install
@@ -29,10 +29,8 @@ Example of .env:
 > DB_HOST=mongodb://localhost:27017/portfolio_db
 DB_USER=backend_server
 DB_PASSWD=myPasswordForUser-backend_server
-
 MAIL_USER=username.of.email.that.the.server.uses
 MAIL_PASSWD=myEmailPasword
-
 TARGET_MAIL=the.email.that.all.enquiries.go.to@gmail.com
 
 ### 4. Seed your database with the data from **backend/data_seed** folder, either via MongoDB Compass or mongo shell.
