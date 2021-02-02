@@ -26,12 +26,12 @@ This is a portfolio website using React as frontend, ExpressJS for backend and  
     
 Example of .env:
 
-> DB_HOST=mongodb://localhost:27017/portfolio_db
-DB_USER=backend_server
-DB_PASSWD=myPasswordForUser-backend_server
-MAIL_USER=username.of.email.that.the.server.uses
-MAIL_PASSWD=myEmailPasword
-TARGET_MAIL=the.email.that.all.enquiries.go.to@gmail.com
+> DB_HOST=mongodb://localhost:27017/portfolio_db  <br>
+DB_USER=backend_server   <br>
+DB_PASSWD=myPasswordForUser-backend_server  <br>
+MAIL_USER=username.of.email.that.the.server.uses  <br>
+MAIL_PASSWD=myEmailPasword  <br>
+TARGET_MAIL=the.email.that.all.enquiries.go.to@gmail.com  <br>
 
 ### 4. Seed your database with the data from **backend/data_seed** folder, either via MongoDB Compass or mongo shell.
 
@@ -39,7 +39,7 @@ TARGET_MAIL=the.email.that.all.enquiries.go.to@gmail.com
 
   From the top-level project directory
   
-  I. cd client/ && npm start (starts react dev server at localhost:3000)
+  I. cd client/ && npm start (starts react dev server at localhost:3000)  <br>
   II. node backend/bin/www (starts backend at localhost:3001) 
   
   
