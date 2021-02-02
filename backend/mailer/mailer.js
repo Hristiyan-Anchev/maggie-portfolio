@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 const mailUser = process.env.MAIL_USER;
 const mailPasswd = process.env.MAIL_PASSWD;
+const targetMail = process.env.TARGET_MAIL;
 
 
 // server email
@@ -8,7 +9,7 @@ const transporter = nodemailer.createTransport({
     service:"gmail",
     auth: {
         user: mailUser,
-        pass: "hloifeemcddzaeuf"
+        pass: mailPasswd
     }
 });
 
@@ -20,7 +21,8 @@ module.exports = {
         const mailOptions = {
             from: `"${name}" <${email}>`,
             // your daily driver email goes here
-            to: 'ogi.61@abv.bg',
+            to: targetMail,
+
             subject: subject,
             text: message,
             html: `You have a new message from <strong>${name}</strong> <br/> ----- <br/> <pre>${message}</pre> <br/> ----- <br/> reply to :::  <strong style="font-size: 2rem">${email}</strong>`
