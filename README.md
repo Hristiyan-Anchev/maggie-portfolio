@@ -17,11 +17,11 @@ This is a portfolio website using React as frontend, ExpressJS for backend and  
 > **$** cd ../backend && npm install
 
 ### 3. Create a .env file inside the backend directory
-  This is where you specify your environment variables, such as:
-    -the database connection string
-    -the authentication name and password for your database user (you must create one via mongo shell first to authenticate against your database!) 
-    -the email and password that the server will be using to send emails when using the enquiry form 
-    -the target email that all the enquiries are mailed to
+  This is where you specify your environment variables, such as:   <br>
+    -the database connection string  <br>
+    -the authentication name and password for your database user (you must create one via mongo shell first to authenticate against your database)   <br>
+    -the email and password that the server will be using to send emails when using the enquiry form   <br>
+    -the target email that all the enquiries are mailed to  <br>
     
     
 Example of .env:
