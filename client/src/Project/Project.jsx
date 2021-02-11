@@ -2,14 +2,42 @@ import React,{useState} from "react";
 import styled from "styled-components";
 import Color from "../colors/colors.js";
 import breakpoints from "../breakpoints/breakpoints";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faSearchPlus} from "@fortawesome/free-solid-svg-icons";
 
+const StyledSearchIcon = styled(FontAwesomeIcon)`
+  
+  @media(max-width: ${breakpoints.laptopL}){
+  display: block;
+  }  
+  
+ transition: .6s;
+ &:hover{
+  color:rgba(0,0,0,.8);
+ }
+ 
+  display: block;
+  //position: absolute;
+  //bottom: .5rem;
+  //right: .5rem;
+  color:rgba(0,0,0,.4);
+  //color:black;
+  width: 2rem;
+  height: auto;
+`;
 
-const OverlayWrapper = function ({name, description, className,onClick}) {
+const MagnifyingGlass = function({className,visible}){
+    return (<div style={{fontSize:"1rem",position:"absolute",bottom:0,right:0,padding:"1rem"}} className={className}>
+        <StyledSearchIcon icon={faSearchPlus} size="2x"/>
+    </div>)
+}
+
+const OverlayWrapper = function ({name, description, className,}) {
     return (
         <div className={className + " overlay"}>
             <h1 style={{margin:".9rem 0 .5rem 0"}}>{name}</h1>
             <p style = {{margin:"0.5rem 0 .9rem 0"}}>{description}</p>
-        </div>
+                    </div>
     );
 }
 
@@ -32,11 +60,16 @@ justify-content: center;
   position: absolute;
   top: 0;
   left:0;
+  z-index: 0;
   
   border-radius: 5px;
   
-  &:hover{
-  opacity: .7;
+  
+  
+  @media(min-width: ${breakpoints.laptopL}){
+    &:hover{
+     opacity: .7;
+    }
   }
 `;
 
@@ -49,10 +82,31 @@ const ProjectImage = styled.img`
 
 
 const ProjectWrapper = function({name,description,className,onClick,pictureURL}){
+    const [visible,setVisible] = useState(true);
+
     return(
-        <div  className={className} onClick={onClick}>
-            <Overlay name={name} description={description}/>
+        <div  className={className} onClick={onClick}
+        onMouseEnter={()=>{
+            console.log("enter")
+            setVisible(false)
+        }}
+              onMouseLeave={()=>{
+                  console.log("leave")
+                  setVisible(true)
+              }}
+              onTouchStart={(evt)=>{
+                  setVisible(false)
+              }}
+
+              onTouchEnd={(evt)=>{
+                  setVisible(true)
+              }}
+
+        >
+            {visible && <MagnifyingGlass/>}
+            { <Overlay name={name} description={description}/>}
             <ProjectImage src={pictureURL}/>
+
         </div>
     );
 }
@@ -60,7 +114,7 @@ const ProjectWrapper = function({name,description,className,onClick,pictureURL})
 
 const Project = styled(ProjectWrapper)`
   position: relative;
-  font-size: 0;
+  font-size: 1px;
   border-radius: 5px;
   
  

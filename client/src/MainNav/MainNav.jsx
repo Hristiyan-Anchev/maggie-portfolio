@@ -17,8 +17,6 @@ const NavContainer = styled.nav`
        height:auto;
        border-bottom: 3px solid ${Colors.mainOrange};
       
-       
-     
     `;
 
 

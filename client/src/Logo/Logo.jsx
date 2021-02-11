@@ -1,6 +1,7 @@
 
 import React from "react";
 import styled from "styled-components";
+import {NavLink} from "react-router-dom";
 
 const LogoContainer = styled.img`
     //flex-grow: 1;
@@ -13,12 +14,15 @@ const LogoContainer = styled.img`
     z-index: 400;
 `;
 
+
+
 export default function Logo(props){
     LogoContainer.defaultProps = {
         src:props.src
     }
+    console.log(props.src,"DEBUG");
+    return <NavLink to="/"><LogoContainer/></NavLink>
 
-    return(
-        <LogoContainer/>
-    );
+
+
 }

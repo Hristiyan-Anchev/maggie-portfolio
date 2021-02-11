@@ -23,7 +23,7 @@ module.exports = {
             // your daily driver email goes here
             to: targetMail,
 
-            subject: subject,
+            subject: subject + " |DO NOT REPLY|",
             text: message,
             html: `You have a new message from <strong>${name}</strong> <br/> ----- <br/> <pre>${message}</pre> <br/> ----- <br/> reply to :::  <strong style="font-size: 2rem">${email}</strong>`
         };

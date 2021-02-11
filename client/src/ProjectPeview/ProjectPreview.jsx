@@ -6,7 +6,7 @@ import breakpoints from "../breakpoints/breakpoints";
 
 
 const MainImage = styled(Image)`
-  flex: 1 1 50%;
+  flex: 1 1 60%;
  
   @media(max-width: ${breakpoints.laptop}){
     order:1;
@@ -24,17 +24,21 @@ const SecondaryImage = styled(Image)`
     margin:3%
   }
 
-  //  @media (min-width: ${breakpoints.laptopL}){
-  //   flex: 1 2 40%;
-  // }
+   @media (min-width: ${breakpoints.laptopL}){
+    flex: 1 2 40%;
+  }
 `;
 
 const MainDescription = styled.p`
   flex: 1 2 60%;
+  padding-right:3rem;
+  font-size: 14px;
 
   @media(max-width: ${breakpoints.laptop}){
     order:2;
     width: 100%;
+    padding: 0;
+    font-size: 1rem;
   }
 `;
 const MainSectionWrapper = function({className,mainPictureURL,mainDescription}){

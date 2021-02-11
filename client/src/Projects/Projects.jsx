@@ -30,7 +30,11 @@ const Container = function (props){
          let fetchedData = data;
              (async ()=>{
                  if(fetchedData.length === 0){
-                 fetchedData =await (await fetch("/projects"))
+                 fetchedData =await (await fetch("/projects",{
+                     headers: {
+                         "X-Requested-With": "XMLHttpRequest"
+                     }
+                 }))
                      .json();
                  }
                  setData(fetchedData);

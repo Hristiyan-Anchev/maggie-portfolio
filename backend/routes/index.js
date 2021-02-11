@@ -4,17 +4,27 @@ const mailer = require("../mailer/mailer");
 const Project = require("../models/ProjectModel.js");
 const Illustration = require("../models/IllustrationModel");
 
+const xhrHandler = (req,res,next)=>{
+  if(req.xhr === true){
+    next();
+  }else{
+    res.redirect("/")
+  }
+}
 
 
-router.get("/projects",function(req,res,next){
-  Project.find(function (err,projects){
-    if(err){
-      res.status(500).send({error:true,msg:err.message});
-      console.error(err);
-      return;
-    }
-    res.send(projects);
-  });
+router.get("/projects",xhrHandler,function(req,res,next){
+  console.log("xhr",req.xhr);
+
+    Project.find(function (err, projects) {
+      if (err) {
+        res.status(500).send({error: true, msg: err.message});
+        console.error(err);
+        return;
+      }
+      res.send(projects);
+    });
+
 });
 
 
@@ -39,7 +49,7 @@ router.post("/messageme",function(req,res,next){
 
 });
 
-router.get("/illustrations",function(req,res,next){
+router.get("/illustrations",xhrHandler,function(req,res,next){
     Illustration.find(function (err,illustrations){
       if(err){
         res.status(500).send({error:true,msg:err.message});
