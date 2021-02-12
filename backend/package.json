@@ -14,6 +14,7 @@
     "dotenv": "^8.2.0",
     "express": "~4.17.1",
     "formidable": "^1.2.2",
+    "greenlock-express": "^4.0.3",
     "http-errors": "~1.7.2",
     "jade": "^1.11.0",
     "jsonwebtoken": "^8.5.1",
@@ -23,8 +24,3 @@
     "nodemailer": "^6.4.17"
   }
 }
-
-
-
-
-
