@@ -14,5 +14,13 @@
     "serverKeyType": "RSA-2048",
     "subscriberEmail": "hristian.anchev@gmail.com"
   },
-  "sites": [{ "subject": "0.0.0.0", "altnames": ["0.0.0.0"] }]
+  "sites": [
+    {
+      "subject": "margaritacreates.co",
+      "altnames": [
+        "margaritacreates.co"
+      ],
+      "renewAt": 1
+    }
+  ]
 }
