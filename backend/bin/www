@@ -9,7 +9,9 @@ var debug = require('debug')('backend:server');
 var http = require('http');
 
 //greenlock-express magic going on here
-require("greenlock-express")
+const greenlock = require("greenlock-express")
+
+greenlock
     .init({
       packageRoot: process.cwd(),
       configDir:"./greenlock.d",
@@ -29,7 +31,7 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+// var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
