@@ -18,7 +18,12 @@
     {
       "subject": "margaritacreates.co",
       "altnames": [
+<<<<<<< HEAD
         "margaritacreates.co"
+=======
+        "margaritacreates.co",
+        "www.margaritacreates.co"
+>>>>>>> b046962c616bd0f48d205235c104900a31d084a4
       ],
       "renewAt": 1
     }
