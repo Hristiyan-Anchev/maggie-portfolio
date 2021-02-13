@@ -5,7 +5,7 @@ const Project = require("../models/ProjectModel.js");
 const Illustration = require("../models/IllustrationModel");
 
 const xhrHandler = (req,res,next)=>{
-  console.log("checking xhr:::")
+
   if(req.xhr === true){
     next();
   }else{
