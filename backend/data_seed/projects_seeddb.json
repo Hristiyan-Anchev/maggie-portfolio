@@ -91,5 +91,15 @@
       "/images/design_projects/laurel_dale_centre/p11.jpg"
 
     ]
-  }
+  }, {
+  "name": "Personal branding",
+  "shortDescription": "",
+  "pictureURL": "/images/design_projects/personal_branding/p1.jpg",
+  "mainDescription": "This is my personal branding.",
+  "projectPictures": [
+    "/images/design_projects/personal_branding/p1.jpg",
+    "/images/design_projects/personal_branding/p2.jpg",
+    "/images/design_projects/personal_branding/p3.jpg"
+  ]
+}
 ]
