@@ -3,6 +3,7 @@ import Image from "../Image/Image.jsx";
 import styled from "styled-components";
 import colors from "../colors/colors";
 import breakpoints from "../breakpoints/breakpoints";
+import htmlParser from "html-react-parser";
 
 
 const MainImage = styled(Image)`
@@ -44,7 +45,7 @@ const MainDescription = styled.p`
 const MainSectionWrapper = function({className,mainPictureURL,mainDescription}){
   return(
       <div className={className}>
-          <MainDescription>{mainDescription}</MainDescription>
+          <MainDescription>{htmlParser(mainDescription)}</MainDescription>
           <MainImage src={mainPictureURL}/>
       </div>
   );
