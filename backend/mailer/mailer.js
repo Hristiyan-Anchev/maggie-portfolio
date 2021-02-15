@@ -19,13 +19,13 @@ const transporter = nodemailer.createTransport({
 module.exports = {
     sendMessage:(name,email,subject,message)=>{
         const mailOptions = {
-            from: `"${name}" <${email}>`,
+            from: `"${name}" ${email}`,
             // your daily driver email goes here
             to: targetMail,
 
             subject: subject + " |DO NOT REPLY|",
             text: message,
-            html: `You have a new message from <strong>${name}</strong> <br/> ----- <br/> <pre>${message}</pre> <br/> ----- <br/> reply to :::  <strong style="font-size: 2rem">${email}</strong>`
+            html: `You have a new message from <strong>${name}</strong> <br/> ----- <br/> <pre>${message}</pre> <br/> ----- <br/> reply to :::>>  <strong style="font-size: 2rem">${email}</strong>`
         };
 
         transporter.sendMail(mailOptions, (err,info)=>{
