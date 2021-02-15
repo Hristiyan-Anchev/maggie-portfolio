@@ -54,6 +54,7 @@ export default function Illustrations(props) {
 
 
     return(
+
             <Wrapper>
                 {
                     data.map(i=>{

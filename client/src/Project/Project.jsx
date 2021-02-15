@@ -5,6 +5,7 @@ import breakpoints from "../breakpoints/breakpoints";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSearchPlus} from "@fortawesome/free-solid-svg-icons";
 
+
 const StyledSearchIcon = styled(FontAwesomeIcon)`
   
   @media(max-width: ${breakpoints.laptopL}){
@@ -48,7 +49,7 @@ align-items: center;
 justify-content: center;
 
   font-weight: bold;
-  white-space: nowrap;
+  white-space: normal;
   font-size:1rem;
   text-align: center;
   opacity: 0;

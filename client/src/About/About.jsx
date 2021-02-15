@@ -27,9 +27,14 @@ color: ${colors.mainOrange};
 `;
 
 const Paragraph = styled.p`
-padding:3rem;
+padding:2rem;
   font-weight: bold;
   line-height: 2rem;
+  
+  @media(max-width: ${breakpoints.laptop}){
+  line-height: 1.5rem;
+  padding: 0;
+  }
 `;
 
 
@@ -37,14 +42,16 @@ const MainImg = styled(Img)`
 width: 15rem;
 flex: 1 0 40%;
 order: 1;
-margin:3rem;
+margin:2rem;
 
 @media (max-width:${breakpoints.mobileL}){
 flex:1 1 60%;
+margin:0;
 }
 
 @media (max-width:${breakpoints.laptop}){
 flex:1 1 50%;
+margin:0;
 }
 
 @media (max-width:${breakpoints.laptopL}){
@@ -56,12 +63,17 @@ flex:1 1 60%;
 const SecondaryImg = styled(Img)`
 width: 15rem;
 flex: 1 0 40%;
-margin:3rem;
+margin:0;
 order:4;
 
 @media (max-width:${breakpoints.laptop}){
 flex:1 1 100%;
 order:3;
+
+}
+
+@media(min-width: ${breakpoints.laptop}){
+margin:3rem;
 }
 
 // @media (max-width:${breakpoints.tablet}){

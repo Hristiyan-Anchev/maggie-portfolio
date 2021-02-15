@@ -5,6 +5,7 @@ import {BrowserRouter as Router, NavLink, Route, Switch, useLocation} from "reac
 import breakpoints from "../breakpoints/breakpoints";
 import ProjectPreview from "../ProjectPeview/ProjectPreview";
 
+
 const StyledNavLink = styled(NavLink)`
 justify-self: center;
 margin: 1rem;
@@ -50,6 +51,7 @@ const Container = function (props){
 
      function handleTileClick(evt){
          setTilesVisible(false);
+         window.scrollTo(0,0);
      }
 
     return (
