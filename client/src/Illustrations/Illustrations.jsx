@@ -7,11 +7,11 @@ import Img from "../Image/Image";
 
 const Illustration = styled(Img)`
   flex:1 1 100%;
-  margin:10%;
-  //width: 25rem;
-  @media(min-width: ${breakpoints.laptop}){
+  margin: 3% 0 3% 0;
+  
+  @media(min-width: ${breakpoints.tablet}){
   flex: 0 1 40%;
-  margin:2%;
+  margin:2% 0 2% 0;
   }
   
   @media(min-width: ${breakpoints.laptopL}){

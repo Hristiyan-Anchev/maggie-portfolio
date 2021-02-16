@@ -50,7 +50,7 @@ margin:0;
 }
 
 @media (max-width:${breakpoints.laptop}){
-flex:1 1 50%;
+flex:1 1 60%;
 margin:0;
 }
 

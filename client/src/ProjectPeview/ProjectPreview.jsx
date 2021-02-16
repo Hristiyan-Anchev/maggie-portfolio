@@ -79,7 +79,7 @@ const ProjectHeading = styled.h1`
   width: 100%;
   flex:1 1 100%;
   color: ${colors.mainOrange};
-  white-space: nowrap;
+  white-space: normal;
 `;
 
 const SecondarySectionWrapper = function ({className,pictures}){

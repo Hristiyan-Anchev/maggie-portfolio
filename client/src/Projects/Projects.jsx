@@ -13,10 +13,12 @@ flex: 0 2 40%;
 
 @media (max-width: ${breakpoints.tablet}){
 flex: 2 2 80%;
+margin: 1rem 0 1rem 0;
 }
 
-@media(min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.laptop}) {
+@media(min-width: ${breakpoints.laptop}) and (max-width: ${breakpoints.laptop}) {
 flex: 2 2 30%;
+margin:1rem;
 }
 `
 

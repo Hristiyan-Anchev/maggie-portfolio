@@ -15,7 +15,6 @@ const transporter = nodemailer.createTransport({
 
 
 
-
 module.exports = {
     sendMessage:(name,email,subject,message)=>{
         const mailOptions = {
