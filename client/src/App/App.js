@@ -24,6 +24,7 @@ import Montserrat_Regular from "../shared/fonts/Montserrat/Montserrat-Regular.tt
 import Montserrat_Bold from "../shared/fonts/Montserrat/Montserrat-Bold.ttf"
 import StyledForm from "../HireMeForm/HireMeForm";
 
+
 const GlobalStyle = createGlobalStyle`
   @font-face {
   font-family: "Montserrat";  
@@ -61,12 +62,14 @@ function App() {
 
   return (
 
+
       <Router>
 
       {/*<MainApp>*/}
         <GlobalStyle/>
 
           <PageContainer>
+
 
               {/*Call your components here*/}
 
