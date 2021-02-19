@@ -106,5 +106,21 @@
     "/images/design_projects/personal_branding/p2.png",
     "/images/design_projects/personal_branding/p3.jpg"
   ]
+}, {
+  "name": "Book Cover Design",
+  "shortDescription": "",
+  "pictureURL": "/images/design_projects/handmaid_tale/p1.jpg",
+  "mainDescription": "This is another personal project I created after reading The Handmaid’s Tale by Margaret Atwood and loving it! I used key colours and elements for the front and back cover of the book and tried to make the design quite mysterious to keep the viewer's attention. You can see the sketches I created using my iPad Pro. After polishing the sketches and the layout I wanted, I moved to Adobe Illustrator and vectorized the illustrations. When I was happy with the colours and shapes of the illustrations I moved on to the typography. For the title and the author’s name, I used the font Lora. I chose this font because of the way the serifs are drawn - flowy with a vintage touch, which I think go very well with the concept of the book. For the synopsis, I used the font Roboto. Roboto is a very clean sans serif font with good readability, perfect for the summary of the book. I really enjoyed creating this design and would definitely try to do more projects like this!",
+  "projectPictures": [
+    "/images/design_projects/handmaid_tale/p1.jpg",
+    "/images/design_projects/handmaid_tale/p2.jpg",
+    "/images/design_projects/handmaid_tale/p3.jpg",
+    "/images/design_projects/handmaid_tale/p4.jpg",
+    "/images/design_projects/handmaid_tale/p5.jpg",
+    "/images/design_projects/handmaid_tale/p6.jpg",
+    "/images/design_projects/handmaid_tale/p7.jpg",
+    "/images/design_projects/handmaid_tale/p8.jpg",
+    "/images/design_projects/handmaid_tale/p9.jpg"
+  ]
 }
 ]

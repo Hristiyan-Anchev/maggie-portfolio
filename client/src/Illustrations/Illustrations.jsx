@@ -39,7 +39,7 @@ export default function Illustrations(props) {
 
         (async ()=>{
             if(data.length === 0){
-               fetchedData = await (await fetch("/illustrations",{
+               fetchedData = await (await fetch("/api/illustrations",{
                    headers: {
                        "X-Requested-With": "XMLHttpRequest"
                    }
