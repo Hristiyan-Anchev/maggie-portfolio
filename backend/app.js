@@ -23,6 +23,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+
+
 app.use("/",express.static(path.join(__dirname, 'public')));
 app.use("/",express.static(path.join(__dirname, 'public/build')));
 
@@ -44,7 +46,10 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.redirect("/");
+  // res.redirect("/");
+  // if route not found in the index.js router server will respond with the SPA (index.html)
+  res.sendFile(path.join(__dirname, '/public/build', 'index.html'));
 });
+
 
 module.exports = app;

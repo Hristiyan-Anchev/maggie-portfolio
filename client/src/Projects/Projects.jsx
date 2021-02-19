@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import styled from "styled-components";
 import Project from "../Project/Project";
-import {BrowserRouter as Router, NavLink, Route, Switch, useLocation} from "react-router-dom";
+import {BrowserRouter as Router, NavLink, Redirect, Route, Switch, useLocation} from "react-router-dom";
 import breakpoints from "../breakpoints/breakpoints";
 import ProjectPreview from "../ProjectPeview/ProjectPreview";
 
@@ -33,7 +33,7 @@ const Container = function (props){
          let fetchedData = data;
              (async ()=>{
                  if(fetchedData.length === 0){
-                 fetchedData =await (await fetch("/projects",{
+                 fetchedData =await (await fetch("/api/projects",{
                      headers: {
                          "X-Requested-With": "XMLHttpRequest"
                      }
@@ -82,6 +82,7 @@ const Container = function (props){
                         );
                     })
                 }
+                <Route render={() => <Redirect to={{pathname: "/"}}/>}/>
             </Switch>
         </Router>
         </div>

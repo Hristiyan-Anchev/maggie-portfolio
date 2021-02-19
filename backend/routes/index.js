@@ -14,8 +14,10 @@ const xhrHandler = (req,res,next)=>{
 }
 
 
-router.get("/projects",xhrHandler,function(req,res,next){
-  console.log("xhr",req.xhr);
+router.get("/api/projects",
+    // xhrHandler,
+    function(req,res,next){
+  // console.log("xhr",req.xhr);
 
     Project.find(function (err, projects) {
       if (err) {
@@ -29,7 +31,7 @@ router.get("/projects",xhrHandler,function(req,res,next){
 });
 
 
-router.post("/messageme",function(req,res,next){
+router.post("/api/messageme",function(req,res,next){
   const {name,email,subject,message} = req.body;
 
 
@@ -50,7 +52,9 @@ router.post("/messageme",function(req,res,next){
 
 });
 
-router.get("/illustrations",xhrHandler,function(req,res,next){
+router.get("/api/illustrations",
+    // xhrHandler,
+    function(req,res,next){
     Illustration.find(function (err,illustrations){
       if(err){
         res.status(500).send({error:true,msg:err.message});
@@ -60,4 +64,12 @@ router.get("/illustrations",xhrHandler,function(req,res,next){
       res.send(illustrations);
     });
 });
+
+// router.get(['*'], function(req, res, next) {
+//   res.sendFile(path.join(__dirname, '../public', 'index.html'));
+// });
+
+
 module.exports = router;
+
+

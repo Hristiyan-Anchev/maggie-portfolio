@@ -210,7 +210,7 @@ const FormWrapper = function({className}){
         });
 
         (async ()=>{
-            const response =  await (await fetch("/messageme", {
+            const response =  await (await fetch("/api/messageme", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
