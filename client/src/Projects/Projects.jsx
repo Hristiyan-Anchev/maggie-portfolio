@@ -82,7 +82,7 @@ const Container = function (props){
                         );
                     })
                 }
-                <Route render={() => <Redirect to={{pathname: "/"}}/>}/>
+
             </Switch>
         </Router>
         </div>
