@@ -26,8 +26,16 @@ const SecondaryImage = styled(Image)`
   }
 
    @media (min-width: ${breakpoints.laptopL}){
-    flex: 1 2 40%;
+    flex: 1 2 35%;
+    
+    &:last-child {
+    flex:0 1 40%;
+    //margin:10%
   }
+  }
+  
+  
+  
 `;
 
 const MainDescription = styled.p`
@@ -42,6 +50,7 @@ const MainDescription = styled.p`
     font-size: 1rem;
   }
 `;
+
 const MainSectionWrapper = function({className,mainPictureURL,mainDescription}){
   return(
       <div className={className}>
