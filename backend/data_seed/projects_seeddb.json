@@ -143,14 +143,14 @@
   "pictureURL": "/images/design_projects/hospital_ui/p1.jpg",
   "mainDescription": "This is a project I had to create as part of my UI Design course. We had a list of websites we could choose from, to redesign the interface. I chose the hospital website, as it was a bit different than what I would usually go for, and I am happy with my decision! The original logo (I’ve replaced it for security reasons) Had a deep blue and red colour scheme and that was my main point of inspiration. I wanted the website to go well with the logo and the field. I opted for a light and bright blue, a deep greenish-blue and a bright red. Blue. Blue symbolises Intelligence, trust, dependence, integrity and cleanliness, and red symbolises attention and strength. The meanings of colours are very important, and we have to think about their use carefully. When creating the landing page, I wanted the first CTA to be a “book appointment” button because that would be one of the main reasons people would visit the website, and we don’t want them to waste time looking for that option. I made sure to show a few of the most important services provided, a couple of articles that would be useful for the consumer, and reviews. Including other patients’ opinions really helps build the company trust and image. I ended with the footer, containing all of the pages, social media buttons and again the CTA for booking appointments.",
   "projectPictures": [
-    "/images/design_projects/hospital_ui/p1.jpg",
-    "/images/design_projects/hospital_ui/p2.jpg",
-    "/images/design_projects/hospital_ui/p3.jpg",
-    "/images/design_projects/hospital_ui/p4.jpg",
-    "/images/design_projects/hospital_ui/p5.jpg",
-    "/images/design_projects/hospital_ui/p6.jpg",
-    "/images/design_projects/hospital_ui/p7.jpg",
-    "/images/design_projects/hospital_ui/p8.jpg"
+    "/images/design_projects/hospital_ui/p1.png",
+    "/images/design_projects/hospital_ui/p2.png",
+    "/images/design_projects/hospital_ui/p3.png",
+    "/images/design_projects/hospital_ui/p4.png",
+    "/images/design_projects/hospital_ui/p5.png",
+    "/images/design_projects/hospital_ui/p6.png",
+    "/images/design_projects/hospital_ui/p7.png",
+    "/images/design_projects/hospital_ui/p8.png"
   ]
 }
 ]
