@@ -122,4 +122,35 @@
     "/images/design_projects/handmaid_tale/p9.jpg"
   ]
 }
+,{
+  "name": "Chocolate Bar Packaging Design",
+  "shortDescription": "",
+  "pictureURL": "/images/design_projects/chocolate_bar/p1.jpg",
+  "mainDescription": "When creating the design for this chocolate bar I knew I wanted to make it very fresh and modern, since every other chocolate bar I’ve seen has a dark minimalistic theme. I created an illustration using Procreate and my iPad. When I was sketching the design I wanted to show the appreciation of the plant and what we can derive from it. For this reason, the cocoa bean is quite large, larger than normal, to catch your eye. The colours are bright and fresh making the illustration more interesting. After finishing the illustration, I moved to Adobe illustrator to digitalize it and then using Affinity Designer to add some texture to it. When it came time to pick the typography, I chose Lora - a serif feminine font with a few weight variations. I knew I wanted to use a serif font to keep up with the new trends and because it looks classy. To compliment that, I paired it with Akrobat - a san serif, clean font. In my design, the green label that you see on the front and back of the bar, would not be glued, but rather tucked in in the packaging. The reason for this is so that people can keep the illustration on the front of the packaging as an art piece and not have the label in the way.",
+  "projectPictures": [
+    "/images/design_projects/chocolate_bar/p1.jpg",
+    "/images/design_projects/chocolate_bar/p2.jpg",
+    "/images/design_projects/chocolate_bar/p3.jpg",
+    "/images/design_projects/chocolate_bar/p4.jpg",
+    "/images/design_projects/chocolate_bar/p5.jpg",
+    "/images/design_projects/chocolate_bar/p6.jpg",
+    "/images/design_projects/chocolate_bar/p7.jpg",
+    "/images/design_projects/chocolate_bar/p8.jpg"
+  ]
+},{
+  "name": "Hospital UI Design",
+  "shortDescription": "",
+  "pictureURL": "/images/design_projects/hospital_ui/p1.jpg",
+  "mainDescription": "This is a project I had to create as part of my UI Design course. We had a list of websites we could choose from, to redesign the interface. I chose the hospital website, as it was a bit different than what I would usually go for, and I am happy with my decision! The original logo (I’ve replaced it for security reasons) Had a deep blue and red colour scheme and that was my main point of inspiration. I wanted the website to go well with the logo and the field. I opted for a light and bright blue, a deep greenish-blue and a bright red. Blue. Blue symbolises Intelligence, trust, dependence, integrity and cleanliness, and red symbolises attention and strength. The meanings of colours are very important, and we have to think about their use carefully. When creating the landing page, I wanted the first CTA to be a “book appointment” button because that would be one of the main reasons people would visit the website, and we don’t want them to waste time looking for that option. I made sure to show a few of the most important services provided, a couple of articles that would be useful for the consumer, and reviews. Including other patients’ opinions really helps build the company trust and image. I ended with the footer, containing all of the pages, social media buttons and again the CTA for booking appointments.",
+  "projectPictures": [
+    "/images/design_projects/hospital_ui/p1.jpg",
+    "/images/design_projects/hospital_ui/p2.jpg",
+    "/images/design_projects/hospital_ui/p3.jpg",
+    "/images/design_projects/hospital_ui/p4.jpg",
+    "/images/design_projects/hospital_ui/p5.jpg",
+    "/images/design_projects/hospital_ui/p6.jpg",
+    "/images/design_projects/hospital_ui/p7.jpg",
+    "/images/design_projects/hospital_ui/p8.jpg"
+  ]
+}
 ]
