@@ -34,8 +34,6 @@ const SecondaryImage = styled(Image)`
   }
   }
   
-  
-  
 `;
 
 const MainDescription = styled.p`
