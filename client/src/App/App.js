@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
   font-family: "Montserrat",serif;
   }
   
-  
+ 
 `;
 
 const MainApp = styled.div`
