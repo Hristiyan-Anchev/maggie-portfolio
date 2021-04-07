@@ -1,8 +1,9 @@
 # maggie-portfolio
+Live version of this project can be seen at: https://www.margaritacreates.co/ 
 
 *work in progress*
 
-This is a portfolio website using React as frontend, ExpressJS for backend and  Mongoose as persistence.
+This is a portfolio website using React as frontend, ExpressJS for backend and  Mongoose as persistence layer.
 
 ## How to run :
 
