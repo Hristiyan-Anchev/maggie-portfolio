@@ -3,6 +3,8 @@ var router = express.Router();
 const mailer = require("../mailer/mailer");
 const Project = require("../models/ProjectModel.js");
 const Illustration = require("../models/IllustrationModel");
+const app = require("../app");
+
 
 const xhrHandler = (req,res,next)=>{
 
@@ -14,7 +16,8 @@ const xhrHandler = (req,res,next)=>{
 }
 
 
-router.get("/api/projects",
+
+router.get("/projects",
     // xhrHandler,
     function(req,res,next){
   // console.log("xhr",req.xhr);
@@ -31,7 +34,7 @@ router.get("/api/projects",
 });
 
 
-router.post("/api/messageme",function(req,res,next){
+router.post("/messageme",function(req,res,next){
   const {name,email,subject,message} = req.body;
 
 
@@ -52,7 +55,7 @@ router.post("/api/messageme",function(req,res,next){
 
 });
 
-router.get("/api/illustrations",
+router.get("/illustrations",
     // xhrHandler,
     function(req,res,next){
     Illustration.find(function (err,illustrations){
@@ -68,6 +71,7 @@ router.get("/api/illustrations",
 // router.get(['*'], function(req, res, next) {
 //   res.sendFile(path.join(__dirname, '../public', 'index.html'));
 // });
+
 
 
 module.exports = router;

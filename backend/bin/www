@@ -7,6 +7,9 @@
 var app = require('../app');
 var debug = require('debug')('backend:server');
 var http = require('http');
+var User = require("../models/UserModel");
+var bcrypt = require("bcrypt");
+
 
 // greenlock-express magic going on here
 // const greenlock = require("greenlock-express")
@@ -37,9 +40,43 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+server.listen(port,seed);
 server.on('error', onError);
 server.on('listening', onListening);
+
+
+//seed if no admin present seed in db
+function seed(){
+
+  const args = process.argv.slice(2);
+
+  let adminPasswd = args[0];
+
+
+
+  User.countDocuments(function (err,count){
+    if(err){
+      console.log("Problem getting user count");
+    }else if(count === 0){
+      bcrypt.hash(adminPasswd,10,function(err,hash){
+        if(err){
+          console.log("There was an error hashing your password! :: ",err);
+        }else{
+          User.create({username:process.env.ADMIN_USER,password:hash},
+              function(err,user){
+                if(err){
+                  console.error(err.message);
+                  console.error("An error occured while creating user: ");
+                }else{
+                  console.log("User: ",user.username," was created!");
+                }
+              }
+          );
+        }
+      });
+    }
+  });
+}
 
 /**
  * Normalize a port into a number, string, or false.
@@ -93,6 +130,7 @@ function onError(error) {
  * Event listener for HTTP server "listening" event.
  */
 
+
 function onListening() {
   var addr = server.address();
   var bind = typeof addr === 'string'
@@ -101,3 +139,5 @@ function onListening() {
   debug('Listening on ' + bind);
 
 }
+
+

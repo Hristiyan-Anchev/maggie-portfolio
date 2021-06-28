@@ -23,6 +23,7 @@ import {createGlobalStyle} from "styled-components";
 import Montserrat_Regular from "../shared/fonts/Montserrat/Montserrat-Regular.ttf";
 import Montserrat_Bold from "../shared/fonts/Montserrat/Montserrat-Bold.ttf"
 import StyledForm from "../HireMeForm/HireMeForm";
+import StyledLoginForm from "../cms/LoginForm";
 
 //
 const GlobalStyle = createGlobalStyle`
@@ -38,7 +39,6 @@ const GlobalStyle = createGlobalStyle`
   font-family: "Montserrat",serif;
   }
   
- 
 `;
 
 const MainApp = styled.div`
@@ -62,7 +62,6 @@ function App() {
 
   return (
 
-
       <Router>
 
       {/*<MainApp>*/}
@@ -83,7 +82,6 @@ function App() {
 
                       <NavigationLink exact={true} href={"/"}>HOME</NavigationLink>
 
-
                       <NavigationLink exact={false} href={"/illustrations"}>ILLUSTRATIONS</NavigationLink>
 
 
@@ -91,8 +89,6 @@ function App() {
 
 
                       <NavigationLink exact={false} href={"/about"}>ABOUT</NavigationLink>
-
-
                   </NavLinks>}
 
 
@@ -120,6 +116,12 @@ function App() {
                  <Route  path="/about/hireme">
                      <StyledForm/>
                  </Route>
+
+                 <Route  path="/cms/login">
+                     <StyledLoginForm/>
+
+                 </Route>
+
 
                  <Route render={() => <Redirect to={{pathname: "/"}}/>}/>
 

@@ -7,6 +7,7 @@ import {faCheck, faExclamation, faExclamationTriangle} from "@fortawesome/free-s
 import {faBehance, faDribbble, faInstagram, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
 
 
+
 const BaseForm = React.forwardRef((props,ref)=>{
     return(
         <form className={props.className} ref={ref}>
@@ -30,11 +31,12 @@ margin:1rem;
 font-size: 2rem;
 letter-spacing: .3rem;
 flex:1 2 auto;
+
 `;
 
 const Textarea = styled.textarea`
   
-
+  
   box-shadow: 5px 5px 15px 2px  #cacbcd;
   transition: .3s;
   flex:1 2 auto;
@@ -162,25 +164,6 @@ const Paragraph = styled.p`
 `;
 
 
-const SocialSection = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-`;
-
-const A = styled.a`
-  
-  text-decoration: none;
-  color: black;
-  margin:1rem;
-  
-  @media(min-width: ${breakpoints.tablet}){
-  margin:1.5rem;
-  }
-`;
-
-
 const FormWrapper = function({className}){
     window.scrollTo(0,0);
     let [hasError,setHasError] = useState(null);
@@ -192,23 +175,21 @@ const FormWrapper = function({className}){
             .map((f,idx) => {
                 f.style.border = "";
                 let curVal = f.value.trim();
-                if(curVal === "" || (idx === 1 && !curVal.match(new RegExp("^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$"))) || curVal.length > 5000){
+                if(curVal === "" ){
                     f.style.border = "2px solid rgba(255, 99, 71, 0.5)";
                 }
                 return f.value.trim();
             });
 
-        //todo: sanitize input
+        //todo : sanitize input
 
         const reqBody = JSON.stringify({
-            name:inputFields[0],
-            email:inputFields[1],
-            subject:inputFields[2],
-            message:inputFields[3]
+            username:inputFields[0],
+            password:inputFields[1],
         });
 
         (async ()=>{
-            const response =  await (await fetch("/api/messageme", {
+            const response =  await (await fetch("/cms/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -219,70 +200,53 @@ const FormWrapper = function({className}){
             setHasError(response.error);
         })();
     }
-            if(hasError === true){
-                return(
-                    <div className={className}>
-                        <FontAwesomeIcon icon={faExclamationTriangle} size={"8x"} style={{color:"red",margin:"1rem"}}/>
-                        <Paragraph>Oopss... an error occurred! Please try again or get in touch via one of the social medias!</Paragraph>
+    if(hasError === true){
+        return(
+            <div className={className}>
+                <FontAwesomeIcon icon={faExclamationTriangle} size={"8x"} style={{color:"red",margin:"1rem"}}/>
+                <Paragraph>Oopss... an error occurred! Please try again or get in touch via one of the social medias!</Paragraph>
 
-                </div>
-                )
-        }else if(hasError === false){
-                return(
-                <div className={className}>
-                    <FontAwesomeIcon icon={faCheck} size={"8x"} style={{color:"forestgreen",margin:"1rem"}}/>
-                    <Paragraph>Thank you so much for reaching out! I am extremely happy that you chose to work with me and I will do my very best to get back to you as soon as possible. In the mean time feel free to check out my social media accounts.</Paragraph>
+            </div>
+        )
+    }else if(hasError === false){
+        return(
+            <div className={className}>
+                <FontAwesomeIcon icon={faCheck} size={"8x"} style={{color:"forestgreen",margin:"1rem"}}/>
+                <Paragraph>Thank you so much for reaching out! I am extremely happy that you chose to work with me and I will do my very best to get back to you as soon as possible. In the mean time feel free to check out my social media accounts.</Paragraph>
 
-                    <SocialSection>
-                        <A href="https://www.linkedin.com/in/margarita-kostadinova-2905a617a/?fbclid=IwAR3fOxHyGNumROffEPkU0VpZq6ZgC-bYUZ0ejn44O4Bi95PuWVcPa-1u4oM">
-                            <FontAwesomeIcon icon={faLinkedinIn}  size={"2x"}/>
-                        </A>
 
-                        <A href="https://www.instagram.com/margarita.creates/?fbclid=IwAR07GBAO_5z9gLv4WSL_Z6gipxokD1kPIJxeFmTjJbwkFqRloJ8TW_IBYxU">
-                            <FontAwesomeIcon icon={faInstagram} size={"2x"}/>
-                        </A>
+            </div>
+        )
+    }else if(hasError === null){
+        return(
+            <div className={className}>
 
-                        <A href="https://www.behance.net/margaritakostadinova?fbclid=IwAR0PuFT4evkpjmJ2hLvSnTpG406tqGmpn6XZ0hAdqBZ6TzfLpqxB6cNCJBs">
-                            <FontAwesomeIcon icon={faBehance} size={"2x"}/>
-                        </A>
+                <Form ref={formRef}
+                      // action="/messageme" method="POST"
+                >
+                    <Label htmlFor={"username"}>Username<Sup>*</Sup></Label>
+                    <Input type={"text"} id={"username"} name={"username"} placeholder={"..."}></Input>
 
-                        <A href="https://dribbble.com/MargaritaKostadinova?fbclid=IwAR31o8IP6BbUB43wLDCNEuzomUiIGdk2ZkcvnHTIeGOkB1-MWoElXH4AyYs">
-                            <FontAwesomeIcon icon={faDribbble} size={"2x"}/>
-                        </A>
-                    </SocialSection>
-                </div>
-                )
-        }else if(hasError === null){
-              return(
-                  <div className={className}>
+                    <Label htmlFor={"password"}>Password<Sup>*</Sup></Label>
+                    <Input type={"password"} id={"password"} name={"password"} placeholder={"..."}></Input>
 
-            <Form ref={formRef} action="/messageme" method="POST">
-            <Label htmlFor={"name"}>Name<Sup>*</Sup></Label>
-            <Input type={"text"} id={"name"} name={"name"} placeholder={"John Smith..."}></Input>
 
-            <Label htmlFor={"email"}>Email<Sup>*</Sup></Label>
-            <Input type={"email"} id={"email"} name={"email"} placeholder={"john.smith@gmail.com..."}></Input>
+                    <Button
+                        onClick={handleSendMessage}
+                        type={"submit"} value={"SEND"}/>
 
-            <Label htmlFor={"subject"}>Subject<Sup>*</Sup></Label>
-            <Input type={"text"} id={"subject"} name={"subject"} placeholder={"Enquiry for..."}></Input>
-
-            <Label htmlFor={"message"}>Message<Sup>*</Sup></Label>
-            <Textarea rows="4" cols="50"
-            type={"text"} id={"message"} name={"message"}
-            placeholder={"Your text message goes here..."}></Textarea>
-
-            <Button onClick={handleSendMessage} type={"submit"} value={"SEND"}/>
-
-            </Form>
-            <PostScript>* - field is required</PostScript>
-                </div>
-              )
-        }
+                </Form>
+                <PostScript>* - field is required</PostScript>
+            </div>
+        )
+    }
 }
 
 
 
-const StyledForm = styled(FormWrapper)`
+
+
+const StyledLoginForm = styled(FormWrapper)`
 width: 100%;
 display:flex;
 flex-wrap: wrap;
@@ -296,4 +260,4 @@ justify-content: center;
 }
 `;
 
-export default StyledForm;
+    export default StyledLoginForm;
